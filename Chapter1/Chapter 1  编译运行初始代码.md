@@ -35,4 +35,4 @@ make
 ./stat
 ~~~
 最终运行结果如下图
-[![Screen](https://raw.github.com/dingziranrr/linux2-book/master/1.jpg)](https://raw.github.com/dingziranrr/linux2-book/master/1.jpg)
+[![Screen](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter1/1.jpg)](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter1/1.jpg)
