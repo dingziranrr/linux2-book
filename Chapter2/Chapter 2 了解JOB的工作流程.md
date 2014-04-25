@@ -26,3 +26,12 @@ setitimer函数每一秒发送一个SIGVTALRM信号，这个信号和SIGCHLD都�
     printf("SIGVTALRM received!\n");
 #endif
 ~~~
+重新编译运行程序，可以看到每秒打印一次
+[![Screen](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/4.jpg)](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/4.jpg)
+##scheduler函数
+每一次捕捉SIGVTALRM信号，会执行一次scheduler函数，修改scheduler函数的第一个#ifdef DEBUG中的内容，改成如下,这里当每从fifo读取一次，就打印提示
+[![Screen](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/5.jpg)](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/5.jpg)
+scheduler函数之后的代码，改成如下
+[![Screen](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/6.jpg)](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/6.jpg)
+最后重新编译运行，可以看到job中每一秒的循环所做的事情
+[![Screen](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/7.jpg)](https://raw.githubusercontent.com/dingziranrr/linux2-book/master/Chapter2/7.jpg)
